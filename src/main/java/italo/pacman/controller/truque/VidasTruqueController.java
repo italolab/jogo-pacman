@@ -12,28 +12,23 @@ public class VidasTruqueController implements TruqueListener {
     }
     
     @Override
-    public void executa( char[] truque ) {        
-        int ncasas = 0;
-                
+    public void executa( char[] truque ) {                        
+        String quantVidasStr = "";
+        
         boolean ehNumero = true;
-        while( ehNumero && ncasas < truque.length ) {       
-            char ch = truque[ ncasas ];
+        for( int i = truque.length-1; ehNumero && i >= 0; i-- ) {       
+            char ch = truque[ i ];
             if ( Character.isDigit( ch ) ) {
-                ncasas++;
+                quantVidasStr = ch + quantVidasStr;
             } else {
                 ehNumero = false;
             }
         }        
                 
-        char[] vidasCHs = new char[ ncasas ];
-        for( int i = 0; i < ncasas; i++ )
-            vidasCHs[ i ] = truque[ i ];
-              
-        try {
-        	int vidas = Integer.parseInt( new String( vidasCHs ) );        
+        if ( !quantVidasStr.isEmpty() ) {        	                      
+        	int vidas = Integer.parseInt( quantVidasStr );        
         	aplic.getJogo().setNVidas( vidas );
-        } catch ( NumberFormatException e ) {
-        	
+       
         }
     }
     

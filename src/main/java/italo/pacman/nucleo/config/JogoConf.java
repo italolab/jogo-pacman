@@ -14,8 +14,6 @@ public interface JogoConf {
     
     public final static String TRUQUE_PULAR_FASE = "FASE?";
     public final static String TRUQUE_ATRAVESSAR_PAREDES = "AP";
-    public final static String TRUQUE_VIDAS9 = "?VIDAS";    
-    public final static String TRUQUE_VIDAS99 = "??VIDAS";    
-    public final static String TRUQUE_VIDAS999 = "???VIDAS";
+    public final static String TRUQUE_VIDAS999 = "VIDAS???";
     
 }

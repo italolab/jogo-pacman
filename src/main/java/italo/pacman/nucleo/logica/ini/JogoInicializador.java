@@ -144,8 +144,6 @@ public class JogoInicializador {
         Truque[] truques = {
             new Truque( JogoConf.TRUQUE_PULAR_FASE, gTruqueListener.getPularFaseTruqueListener() ),
             new Truque( JogoConf.TRUQUE_ATRAVESSAR_PAREDES, gTruqueListener.getAtravessarParedesTruqueListener() ),
-            new Truque( JogoConf.TRUQUE_VIDAS9, gTruqueListener.getVidasTruqueListener() ),            
-            new Truque( JogoConf.TRUQUE_VIDAS99, gTruqueListener.getVidasTruqueListener() ),            
             new Truque( JogoConf.TRUQUE_VIDAS999, gTruqueListener.getVidasTruqueListener() )           
         };
         
