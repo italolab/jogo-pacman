@@ -32,7 +32,7 @@ public class Jogo {
         if ( fases == null ) {
             fases = new Fase[ fases2.length ];
             for( int i = 0; i < fases.length; i++ )
-                fases[ i ] = new Fase();
+                fases[ i ] = new Fase(); 
         }
         
         for( int i = 0; i < fases.length; i++ )

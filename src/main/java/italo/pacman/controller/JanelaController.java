@@ -24,16 +24,20 @@ public class JanelaController implements JanelaGUIListener {
         
         switch( tecla ) {
             case JanelaGUIListener.TRAZ:
-                pacman.setNovaDirecao( Personagem.TRAZ );
+            	if ( !aplic.getFaseManager().isDesabilitarDirecao( pacman, fase ) )
+            		pacman.setNovaDirecao( Personagem.TRAZ );
                 break;
             case JanelaGUIListener.FRENTE:
-                pacman.setNovaDirecao( Personagem.FRENTE );
+            	if ( !aplic.getFaseManager().isDesabilitarDirecao( pacman, fase ) )
+            		pacman.setNovaDirecao( Personagem.FRENTE );
                 break;
             case JanelaGUIListener.BAIXO:
-                pacman.setNovaDirecao( Personagem.BAIXO );
+            	if ( !aplic.getFaseManager().isDesabilitarDirecao( pacman, fase ) )
+            		pacman.setNovaDirecao( Personagem.BAIXO );
                 break;
             case JanelaGUIListener.CIMA:
-                pacman.setNovaDirecao( Personagem.CIMA );
+            	if ( !aplic.getFaseManager().isDesabilitarDirecao( pacman, fase ) )
+            		pacman.setNovaDirecao( Personagem.CIMA );
                 break;
             case JanelaGUIListener.ENTER:
                 jogo.setPausa( !jogo.isPausa() ); 

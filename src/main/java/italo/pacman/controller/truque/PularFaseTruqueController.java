@@ -1,6 +1,7 @@
 package italo.pacman.controller.truque;
 
 import italo.pacman.SistemaAplic;
+import italo.pacman.nucleo.to.Fase;
 import italo.pacman.nucleo.to.Jogo;
 import italo.pacman.nucleo.to.TruqueListener;
 
@@ -14,7 +15,7 @@ public class PularFaseTruqueController implements TruqueListener {
 
     @Override
     public void executa( char[] truque ) {
-        Jogo jogo = aplic.getJogo();
+        Jogo jogo = aplic.getJogo();       
         int maxFaseI = jogo.getFases().length-1;
                 
         int i = truque.length-1;
@@ -23,8 +24,11 @@ public class PularFaseTruqueController implements TruqueListener {
             int faseI = Integer.parseInt( ""+ch );
             faseI--;
             
-            if ( faseI > 0 && faseI <= maxFaseI ) {
+            if ( faseI >= 0 && faseI <= maxFaseI ) {
+            	Fase faseIni = aplic.getJogoConfigInicial().getFases()[ faseI ];
+            	
                 jogo.setFaseCorrente( faseI ); 
+                jogo.getFases()[ faseI ].inicializa( faseIni ); 
                 aplic.getGUI().getPainelDesenho().repaint();
             }            
         }            

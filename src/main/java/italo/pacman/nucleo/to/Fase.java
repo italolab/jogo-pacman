@@ -12,7 +12,7 @@ public class Fase {
     public final static int SEM_BOLINHA = 0;
     public final static int BOLINHA = 1;
     public final static int BOLINHA_GRANDE = 2;
-    
+        
     private int[][] paredes;
     private int[][] bolinhas;
     private int[][] tabuleiroAEstrela;
@@ -36,7 +36,7 @@ public class Fase {
     private boolean perdeu;    
     
     private Fase faseInicializador = null;
-
+    
     public void inicializa( Fase fase ) {
         this.faseInicializador = fase;
         
@@ -134,7 +134,7 @@ public class Fase {
                 monstrinhos[ i ].inicializa( monstrinhos2[ i ] );        
 
             pacman.inicializa( pacman2 );
-            
+                                    
             perdeu = faseInicializador.isPerdeu();
             venceu = faseInicializador.isVenceu();
         }        
