@@ -61,8 +61,8 @@ public interface FaseConf1{
         
     public final static int FREQUENCIA_ESTADO_FRACO_TEMPO = 5000;
     public final static int FREQUENCIA_ESTADO_MUITO_FRACO_TEMPO_PARA_CASINHA = 3000;
-    public final static int FREQUENCIA_PACMAN_NORMAL = 6;
-    public final static int FREQUENCIA_MONSTRINHO_NORMAL = 6;
+    public final static int FREQUENCIA_PACMAN_NORMAL = 5;
+    public final static int FREQUENCIA_MONSTRINHO_NORMAL = 5;
     public final static int FREQUENCIA_MONSTRINHO_FRACO = 12;
     public final static int FREQUENCIA_MONSTRINHO_MUITO_FRACO = 3;
     
