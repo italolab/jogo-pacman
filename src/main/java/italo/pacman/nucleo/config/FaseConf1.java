@@ -5,7 +5,7 @@ import java.awt.Color;
 
 public interface FaseConf1{
     
-	public final static Color PAREDES_COR = Color.WHITE;
+	public final static Color PAREDES_COR = new Color( 255, 255, 200 );
 	
     public final static int[][] PAREDES = {
         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },  
