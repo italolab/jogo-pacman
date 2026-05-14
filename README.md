@@ -26,4 +26,4 @@ Para jogar, utilize as setas do teclado para mover para cima/baixo/traz/frente n
 
 * <u><b>Atravessar paredes</b></u>: para atravessar as paredes com o pacman, basta digitar as teclas: ap. Ex: digite "ap" para atravessar paredes e, caso queira retirar o truque de atravessar paredes, basta digitar "ap" novamente.
 
-> Digite os truques sem as aspas
+> Digite os truques sem as aspas e sem parênteses
