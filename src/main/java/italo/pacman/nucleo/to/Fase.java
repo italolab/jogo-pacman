@@ -1,5 +1,7 @@
 package italo.pacman.nucleo.to;
 
+import java.awt.Color;
+
 public class Fase {
     
     public final static int CELULA_LIVRE = 0;
@@ -13,6 +15,8 @@ public class Fase {
     public final static int BOLINHA = 1;
     public final static int BOLINHA_GRANDE = 2;
         
+    private Color paredesCor;
+    
     private int[][] paredes;
     private int[][] bolinhas;
     private int[][] tabuleiroAEstrela;
@@ -58,6 +62,8 @@ public class Fase {
         }
         if ( pacman == null )
             pacman = new Pacman();        
+        
+        paredesCor = fase.getParedesCor();
         
         for( int i = 0; i < paredes.length; i++ )
             for( int j = 0; j < paredes[ i ].length; j++ )
@@ -259,5 +265,13 @@ public class Fase {
     public void setMonstrinhoRaioBuscaPacman(int monstrinhoRaioBuscaPacman) {
         this.monstrinhoRaioBuscaPacman = monstrinhoRaioBuscaPacman;
     }
+
+	public Color getParedesCor() {
+		return paredesCor;
+	}
+
+	public void setParedesCor(Color paredesCor) {
+		this.paredesCor = paredesCor;
+	}
         
 }

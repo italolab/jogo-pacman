@@ -3,10 +3,12 @@ package italo.pacman.nucleo.config.atributos;
 import java.awt.Color;
 
 public class FaseAtributos {
-    
+    	
     private int[][] paredes;
     
-    private int[][] intervalosCelulasSemBolinha;    
+	private Color paredesCor;
+
+	private int[][] intervalosCelulasSemBolinha;    
     private int[][] bolinhasGrandes;
     
     private int[][] monstrinhosDirecoesIniciais;
@@ -24,7 +26,15 @@ public class FaseAtributos {
     
     private int monstrinhoRaioBuscaPacman;
         
-    public int[][] getParedes() {
+	public Color getParedesCor() {
+		return paredesCor;
+	}
+
+	public void setParedesCor(Color paredesCor) {
+		this.paredesCor = paredesCor;
+	}
+
+	public int[][] getParedes() {
         return paredes;
     }
 

@@ -1,26 +1,27 @@
 package italo.pacman.nucleo.logica.ini;
 
-import italo.pacman.nucleo.logica.util.ArrayUtil;
-import italo.pacman.nucleo.config.JogoConf;
-import italo.pacman.nucleo.to.Fase;
-import italo.pacman.nucleo.to.Jogo;
-import italo.pacman.nucleo.to.Monstrinho;
-import italo.pacman.nucleo.to.Personagem;
-import italo.pacman.gui.desenho.PainelDesenho;
-import italo.pacman.nucleo.config.FaseConf1;
-import italo.pacman.nucleo.config.atributos.FaseAtributos;
-import italo.pacman.nucleo.config.atributos.JogoAtributos;
-import italo.pacman.nucleo.to.Pacman;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+
+import italo.pacman.gui.desenho.PainelDesenho;
+import italo.pacman.nucleo.config.FaseConf1;
 import italo.pacman.nucleo.config.FaseConf2;
 import italo.pacman.nucleo.config.FaseConf3;
 import italo.pacman.nucleo.config.FaseConf4;
 import italo.pacman.nucleo.config.FaseConf5;
+import italo.pacman.nucleo.config.JogoConf;
+import italo.pacman.nucleo.config.atributos.FaseAtributos;
+import italo.pacman.nucleo.config.atributos.JogoAtributos;
+import italo.pacman.nucleo.logica.util.ArrayUtil;
 import italo.pacman.nucleo.logica.util.TodosUtils;
+import italo.pacman.nucleo.to.Fase;
+import italo.pacman.nucleo.to.Jogo;
+import italo.pacman.nucleo.to.Monstrinho;
+import italo.pacman.nucleo.to.Pacman;
+import italo.pacman.nucleo.to.Personagem;
 import italo.pacman.nucleo.to.Truque;
 
 public class JogoInicializador {
@@ -54,6 +55,7 @@ public class JogoInicializador {
         jogoAtr.setBorda( borda );
         
         FaseAtributos faseAtr1 = new FaseAtributos();
+        faseAtr1.setParedesCor( FaseConf1.PAREDES_COR );
         faseAtr1.setParedes( FaseConf1.PAREDES );
         faseAtr1.setIntervalosCelulasSemBolinha( FaseConf1.INTERVALO_CELULAS_SEM_BOLINHAS );
         faseAtr1.setBolinhasGrandes( FaseConf1.BOLINHAS_GRANDES );
@@ -70,6 +72,7 @@ public class JogoInicializador {
         faseAtr1.setMonstrinhosCores( FaseConf1.MONSTRINHOS_CORES );        
         
         FaseAtributos faseAtr2 = new FaseAtributos();
+        faseAtr2.setParedesCor( FaseConf2.PAREDES_COR );
         faseAtr2.setParedes( FaseConf2.PAREDES );
         faseAtr2.setIntervalosCelulasSemBolinha(FaseConf2.INTERVALO_CELULAS_SEM_BOLINHAS );
         faseAtr2.setBolinhasGrandes( FaseConf2.BOLINHAS_GRANDES );
@@ -86,6 +89,7 @@ public class JogoInicializador {
         faseAtr2.setMonstrinhosCores( FaseConf2.MONSTRINHOS_CORES );
         
         FaseAtributos faseAtr3 = new FaseAtributos();
+        faseAtr3.setParedesCor( FaseConf3.PAREDES_COR );
         faseAtr3.setParedes( FaseConf3.PAREDES );
         faseAtr3.setIntervalosCelulasSemBolinha( FaseConf3.INTERVALO_CELULAS_SEM_BOLINHAS );
         faseAtr3.setBolinhasGrandes( FaseConf3.BOLINHAS_GRANDES );
@@ -102,6 +106,7 @@ public class JogoInicializador {
         faseAtr3.setMonstrinhosCores( FaseConf3.MONSTRINHOS_CORES );
         
         FaseAtributos faseAtr4 = new FaseAtributos();
+        faseAtr4.setParedesCor( FaseConf4.PAREDES_COR );
         faseAtr4.setParedes( FaseConf4.PAREDES );
         faseAtr4.setIntervalosCelulasSemBolinha( FaseConf4.INTERVALO_CELULAS_SEM_BOLINHAS );
         faseAtr4.setBolinhasGrandes( FaseConf4.BOLINHAS_GRANDES );
@@ -118,6 +123,7 @@ public class JogoInicializador {
         faseAtr4.setMonstrinhosCores( FaseConf4.MONSTRINHOS_CORES );
         
         FaseAtributos faseAtr5 = new FaseAtributos();
+        faseAtr5.setParedesCor( FaseConf5.PAREDES_COR );
         faseAtr5.setParedes( FaseConf5.PAREDES );
         faseAtr5.setIntervalosCelulasSemBolinha( FaseConf5.INTERVALO_CELULAS_SEM_BOLINHAS );
         faseAtr5.setBolinhasGrandes( FaseConf5.BOLINHAS_GRANDES );
@@ -172,6 +178,7 @@ public class JogoInicializador {
         
         int borda = jogoAtr.getBorda();
         int placarH = jogoAtr.getPlacarH();
+        Color paredesCor = faseAtr.getParedesCor();
         int[][] paredes = faseAtr.getParedes();
         int[][] monstrinhosPosicoes = faseAtr.getMonstrinhoPosicoes();
         int[][] monstrinhosDirecoesIniciais = faseAtr.getMonstrinhosDirecoesIniciais();
@@ -238,6 +245,7 @@ public class JogoInicializador {
         fase.setCelulaAltura( ch );
         fase.setPacman( pacman );
         fase.setMonstrinhos( monstrinhos );
+        fase.setParedesCor( paredesCor );
         fase.setParedes( paredes2 );
         fase.setBolinhas( bolinhas );
         fase.setMonstrinhoRaioBuscaPacman( monstrinhoRaioBuscaPacman ); 

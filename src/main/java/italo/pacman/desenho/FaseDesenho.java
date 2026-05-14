@@ -35,7 +35,7 @@ public class FaseDesenho {
         Graphics2D g2d = (Graphics2D)g;
         
         g2d.setStroke( strokeTabuleiro );
-        g2d.setColor( Color.WHITE );
+        g2d.setColor( fase.getParedesCor() );
         this.desenhaTabuleiro( fase, g );        
         
         g2d.setColor( Color.RED );
