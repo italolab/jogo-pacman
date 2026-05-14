@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: italo
+Build-Jdk: 25.0.2
+Main-Class: italo.pacman.PacmanMain
+Created-By: Maven Integration for Eclipse
+
